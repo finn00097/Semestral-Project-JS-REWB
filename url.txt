@@ -2,4 +2,4 @@ Semester project 7REWB - Jiří Špičák
 Website: Semestral Project (volleyball, board games, video games, gym)
 
 Project URL:
-TODO - add the URL after the website is uploaded to hosting
+https://finn00097.github.io/Semestral-Project-JS-REWB/
