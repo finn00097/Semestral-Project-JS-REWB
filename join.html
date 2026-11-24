@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign-up form to join volleyball, board game nights, gaming or gym.">
+  <meta name="author" content="Jiří Špičák">
+  <title>Join Me | Semestral Project – Jiří Špičák</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: logo + menu ===== -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand logo" href="./index.html">
+          <i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span>
+          <small>JIŘÍ ŠPIČÁK</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./volleyball.html"><i class="bi bi-dribbble"></i> Volleyball</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./board-games.html"><i class="bi bi-dice-5-fill"></i> Board Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./video-games.html"><i class="bi bi-controller"></i> Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gym.html"><i class="bi bi-heart-pulse-fill"></i> Gym</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./library.html"><i class="bi bi-collection-fill"></i> Game Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./join.html"><i class="bi bi-person-plus-fill"></i> Join Me</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER + BREADCRUMB ===== -->
+  <section class="page-header join">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Join Me</h1>
+      <p class="lead mb-3">Want to play volleyball, a board game or go to the gym together? Let me know.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Join Me</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-12 col-lg-8">
+            <div class="form-card shadow-sm p-3 p-md-4">
+              <h2 class="section-title">Sign-up form</h2>
+              <p class="text-muted small">Fields marked with <span class="text-danger">*</span> are required.</p>
+
+              <form id="joinForm" class="needs-validation" novalidate>
+
+                <h3 class="form-section-title"><i class="bi bi-person"></i> Personal info</h3>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required minlength="2">
+                      <label for="firstName">First name <span class="text-danger">*</span></label>
+                      <div class="invalid-feedback">Please enter your first name.</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required minlength="2">
+                      <label for="lastName">Last name <span class="text-danger">*</span></label>
+                      <div class="invalid-feedback">Please enter your last name.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required aria-describedby="emailHelp">
+                      <div class="invalid-feedback">Please enter a valid e-mail address.</div>
+                    </div>
+                    <div id="emailHelp" class="form-text">I will never share your e-mail with anyone.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">+420</span>
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="123 456 789" pattern="[0-9 ]{9,11}" aria-describedby="phoneHelp">
+                      <div class="invalid-feedback">Use 9 digits, e.g. 123 456 789.</div>
+                    </div>
+                    <div id="phoneHelp" class="form-text">Optional – for quick messages before a match.</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="birthDate" class="form-label">Date of birth <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="birthDate" name="birthDate" required min="1950-01-01" max="2012-12-31">
+                    <div class="invalid-feedback">Please choose your date of birth.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="nickname" class="form-label">Gaming nickname</label>
+                    <div class="input-group">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="nickname" name="nickname" placeholder="nickname">
+                    </div>
+                    <div class="form-text">Discord / Steam name, if you have one.</div>
+                  </div>
+                </div>
+
+                <h3 class="form-section-title mt-4"><i class="bi bi-joystick"></i> What do you want to do?</h3>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="activity" class="form-label">Activity <span class="text-danger">*</span></label>
+                    <select class="form-select" id="activity" name="activity" required>
+                      <option value="" selected disabled>Choose an activity…</option>
+                      <option value="volleyball">Volleyball match / training</option>
+                      <option value="board">Board game night</option>
+                      <option value="video">Online / co-op video games</option>
+                      <option value="gym">Gym training</option>
+                      <option value="all">Everything!</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose an activity.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="source" class="form-label">How did you find me?</label>
+                    <select class="form-select" id="source" name="source">
+                      <option value="friend">From a friend</option>
+                      <option value="school">At school</option>
+                      <option value="social">Social media</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <span class="form-label d-block">Your level <span class="text-danger">*</span></span>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="level" id="levelBeginner" value="beginner" required>
+                      <label class="form-check-label" for="levelBeginner">Beginner</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="level" id="levelIntermediate" value="intermediate" required>
+                      <label class="form-check-label" for="levelIntermediate">Intermediate</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="level" id="levelAdvanced" value="advanced" required>
+                      <label class="form-check-label" for="levelAdvanced">Advanced</label>
+                      <div class="invalid-feedback ms-2">Choose your level.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <span class="form-label d-block">Preferred days <span class="text-danger">*</span></span>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="dayMon" value="Mon">
+                      <label class="form-check-label" for="dayMon">Mon</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="dayTue" value="Tue">
+                      <label class="form-check-label" for="dayTue">Tue</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="dayWed" value="Wed">
+                      <label class="form-check-label" for="dayWed">Wed</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="dayThu" value="Thu">
+                      <label class="form-check-label" for="dayThu">Thu</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="dayFri" value="Fri">
+                      <label class="form-check-label" for="dayFri">Fri</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="daySat" value="Sat">
+                      <label class="form-check-label" for="daySat">Sat</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="days" id="daySun" value="Sun">
+                      <label class="form-check-label" for="daySun">Sun</label>
+                    </div>
+                    <div class="form-text">Choose at least one day.</div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="hours" class="form-label">Hours per week: <strong id="hoursValue">4</strong></label>
+                    <input type="range" class="form-range" id="hours" name="hours" min="1" max="15" value="4">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="players" class="form-label">How many friends are you bringing?</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-people"></i></span>
+                      <input type="number" class="form-control" id="players" name="players" min="0" max="10" value="0">
+                      <span class="input-group-text">people</span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="form-section-title mt-4"><i class="bi bi-chat-left-text"></i> Message</h3>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="message" class="form-label">Your message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="4" maxlength="500" required minlength="10"
+                              placeholder="Tell me something about you, your favourite game or when you are free…"></textarea>
+                    <div class="form-text"><span id="messageCounter">0</span> / 500 characters (at least 10)</div>
+                    <div class="invalid-feedback">Please write at least 10 characters.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="newsletter" name="newsletter" checked>
+                      <label class="form-check-label" for="newsletter">Send me an e-mail when there is a new game night</label>
+                    </div>
+                    <div class="form-check mt-2">
+                      <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+                      <label class="form-check-label" for="agree">I agree with processing of my personal data <span class="text-danger">*</span></label>
+                      <div class="invalid-feedback">You must agree before saving.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4">
+                <div class="d-flex flex-wrap gap-2 justify-content-end">
+                  <button type="reset" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise"></i> Reset</button>
+                  <button type="submit" class="btn btn-accent btn-lg"><i class="bi bi-floppy-fill"></i> Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="card shadow-sm mb-4">
+              <div class="card-body">
+                <h2 class="h5"><i class="bi bi-info-circle text-accent"></i> How it works</h2>
+                <ol class="small mb-0 ps-3">
+                  <li class="mb-1">Fill in the form and click <strong>Save</strong>.</li>
+                  <li class="mb-1">I will write you back within 2 days.</li>
+                  <li>We meet on the court, at the table or online!</li>
+                </ol>
+              </div>
+            </div>
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h2 class="h5"><i class="bi bi-geo-alt text-accent"></i> Where we meet</h2>
+                <ul class="list-group list-group-flush small">
+                  <li class="list-group-item px-0"><i class="bi bi-dribbble text-primary"></i> Volleyball – school sports hall</li>
+                  <li class="list-group-item px-0"><i class="bi bi-dice-5-fill text-success"></i> Game nights – at my place or a board game café</li>
+                  <li class="list-group-item px-0"><i class="bi bi-controller" style="color: var(--ph-video)"></i> Video games – Discord</li>
+                  <li class="list-group-item px-0"><i class="bi bi-heart-pulse-fill text-accent"></i> Gym – local fitness centre</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== TOAST shown after saving ===== -->
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="saveToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle-fill"></i> Thanks, <strong id="successName"></strong>! Your sign-up was saved.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <div class="logo text-white mb-2"><i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span></div>
+          <p class="small mb-3">My personal website about the things I love doing in my free time –
+            volleyball, board games, video games and the gym.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="h6 text-white text-uppercase">Pages</h2>
+          <ul class="list-unstyled small">
+            <li><a href="./index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="./volleyball.html"><i class="bi bi-chevron-right small"></i> Volleyball</a></li>
+            <li><a href="./board-games.html"><i class="bi bi-chevron-right small"></i> Board Games</a></li>
+            <li><a href="./video-games.html"><i class="bi bi-chevron-right small"></i> Video Games</a></li>
+            <li><a href="./gym.html"><i class="bi bi-chevron-right small"></i> Gym</a></li>
+            <li><a href="./library.html"><i class="bi bi-chevron-right small"></i> Game Library</a></li>
+            <li><a href="./join.html"><i class="bi bi-chevron-right small"></i> Join Me</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contact</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill text-accent"></i> Czech Republic</li>
+            <li class="mb-1"><i class="bi bi-envelope-fill text-accent"></i> <a href="./join.html">Write me via the form</a></li>
+            <li class="mb-1"><i class="bi bi-mortarboard-fill text-accent"></i> Semester project 7REWB</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 Jiří Špičák · Made with <i class="bi bi-bootstrap-fill"></i> Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <button type="button" id="backToTop" class="btn btn-accent shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

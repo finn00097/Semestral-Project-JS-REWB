@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="My favourite board games and Friday game nights.">
+  <meta name="author" content="Jiří Špičák">
+  <title>Board Games | Semestral Project – Jiří Špičák</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: logo + menu ===== -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand logo" href="./index.html">
+          <i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span>
+          <small>JIŘÍ ŠPIČÁK</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./volleyball.html"><i class="bi bi-dribbble"></i> Volleyball</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./board-games.html"><i class="bi bi-dice-5-fill"></i> Board Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./video-games.html"><i class="bi bi-controller"></i> Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gym.html"><i class="bi bi-heart-pulse-fill"></i> Gym</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./library.html"><i class="bi bi-collection-fill"></i> Game Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./join.html"><i class="bi bi-person-plus-fill"></i> Join Me</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER + BREADCRUMB ===== -->
+  <section class="page-header board">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Board Games</h1>
+      <p class="lead mb-3">Dice, cards, meeples and a lot of fun with friends.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="./index.html">Hobbies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Board Games</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6 order-lg-2">
+            <h2 class="section-title">Friday game nights</h2>
+            <p>Every Friday evening my friends and I meet around a big table. Someone brings snacks, someone brings a new game
+              and we play until late at night. Modern board games are much more than Monopoly – there are deep strategy games,
+              cooperative games where everyone wins or loses together and fast party games for big groups.</p>
+            <p>The full list of games I own or played is in my <a href="./library.html" class="link-success fw-semibold">Game Library</a>.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="./library.html" class="btn btn-success"><i class="bi bi-collection"></i> Game Library</a>
+              <a href="./join.html" class="btn btn-outline-success"><i class="bi bi-calendar-plus"></i> Join a game night</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-lg-1">
+            <img src="./images/board-games.jpg" class="img-fluid rounded-4 shadow" alt="Throwing dice on a board game">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <h2 class="section-title">My favourite board games</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-success">
+            <div class="card-header text-bg-success"><i class="bi bi-dice-5"></i> Catan</div>
+            <div class="card-body">
+              <p class="card-text">Trade, build roads and settle an island. A classic that started my board game hobby.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 3–4</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 60–120 min</span>
+              <span class="badge text-bg-success">Strategy</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-primary">
+            <div class="card-header text-bg-primary"><i class="bi bi-dice-5"></i> Ticket to Ride</div>
+            <div class="card-body">
+              <p class="card-text">Collect train cards and claim railway routes across the map. Easy to teach.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 2–5</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 30–60 min</span>
+              <span class="badge text-bg-primary">Family</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-danger">
+            <div class="card-header text-bg-danger"><i class="bi bi-dice-5"></i> Codenames</div>
+            <div class="card-body">
+              <p class="card-text">Two teams, one-word clues and a lot of laughing. The best party game.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 2–8</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 15 min</span>
+              <span class="badge text-bg-danger">Party</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-info">
+            <div class="card-header text-bg-info"><i class="bi bi-dice-5"></i> Pandemic</div>
+            <div class="card-body">
+              <p class="card-text">Work together to stop four diseases spreading around the world.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 2–4</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 45 min</span>
+              <span class="badge text-bg-info">Cooperative</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-warning">
+            <div class="card-header text-bg-warning"><i class="bi bi-dice-5"></i> Azul</div>
+            <div class="card-body">
+              <p class="card-text">Draft beautiful tiles and decorate the walls of a royal palace.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 2–4</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 30–45 min</span>
+              <span class="badge text-bg-warning">Abstract</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card game-card h-100 shadow-sm border-secondary">
+            <div class="card-header text-bg-secondary"><i class="bi bi-dice-5"></i> Wingspan</div>
+            <div class="card-body">
+              <p class="card-text">Attract birds to your wildlife preserves and build a strong engine.</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Players"><i class="bi bi-people-fill"></i> 1–5</span>
+              <span class="badge text-bg-light border" data-bs-toggle="tooltip" data-bs-title="Playing time"><i class="bi bi-clock"></i> 40–70 min</span>
+              <span class="badge text-bg-secondary">Engine building</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Types of board games</h2>
+            <div class="accordion shadow-sm" id="typesAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#type1" aria-expanded="true" aria-controls="type1"><i class="bi bi-chess me-2"></i>Strategy games</button></h3>
+                <div id="type1" class="accordion-collapse collapse show" data-bs-parent="#typesAccordion"><div class="accordion-body">Long-term planning, resource management and a bit of luck. Examples: Catan, Terraforming Mars, Brass: Birmingham.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#type2" aria-expanded="false" aria-controls="type2"><i class="bi bi-people me-2"></i>Cooperative games</button></h3>
+                <div id="type2" class="accordion-collapse collapse" data-bs-parent="#typesAccordion"><div class="accordion-body">All players are one team against the game. Examples: Pandemic, The Crew, Gloomhaven.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#type3" aria-expanded="false" aria-controls="type3"><i class="bi bi-emoji-laughing me-2"></i>Party games</button></h3>
+                <div id="type3" class="accordion-collapse collapse" data-bs-parent="#typesAccordion"><div class="accordion-body">Quick rules, many players and lots of fun. Examples: Codenames, Dixit, Activity.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#type4" aria-expanded="false" aria-controls="type4"><i class="bi bi-grid-3x3 me-2"></i>Tile placement</button></h3>
+                <div id="type4" class="accordion-collapse collapse" data-bs-parent="#typesAccordion"><div class="accordion-body">Players build the board from tiles during the game. Examples: Carcassonne, Kingdomino, Cascadia.</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Game night rules</h2>
+            <ul class="list-group list-group-numbered shadow-sm">
+              <li class="list-group-item">The host chooses the first game, the winner chooses the next one.</li>
+              <li class="list-group-item">New players always get the rules explained – no one is left behind.</li>
+              <li class="list-group-item">No greasy snacks at the table – cards must stay clean!</li>
+              <li class="list-group-item">Phones in pockets while playing.</li>
+              <li class="list-group-item">Everybody helps to put the game back in the box.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <div class="logo text-white mb-2"><i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span></div>
+          <p class="small mb-3">My personal website about the things I love doing in my free time –
+            volleyball, board games, video games and the gym.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="h6 text-white text-uppercase">Pages</h2>
+          <ul class="list-unstyled small">
+            <li><a href="./index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="./volleyball.html"><i class="bi bi-chevron-right small"></i> Volleyball</a></li>
+            <li><a href="./board-games.html"><i class="bi bi-chevron-right small"></i> Board Games</a></li>
+            <li><a href="./video-games.html"><i class="bi bi-chevron-right small"></i> Video Games</a></li>
+            <li><a href="./gym.html"><i class="bi bi-chevron-right small"></i> Gym</a></li>
+            <li><a href="./library.html"><i class="bi bi-chevron-right small"></i> Game Library</a></li>
+            <li><a href="./join.html"><i class="bi bi-chevron-right small"></i> Join Me</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contact</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill text-accent"></i> Czech Republic</li>
+            <li class="mb-1"><i class="bi bi-envelope-fill text-accent"></i> <a href="./join.html">Write me via the form</a></li>
+            <li class="mb-1"><i class="bi bi-mortarboard-fill text-accent"></i> Semester project 7REWB</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 Jiří Špičák · Made with <i class="bi bi-bootstrap-fill"></i> Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <button type="button" id="backToTop" class="btn btn-accent shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

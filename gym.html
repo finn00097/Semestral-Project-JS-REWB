@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="My gym training plan, personal records and tips.">
+  <meta name="author" content="Jiří Špičák">
+  <title>Gym | Semestral Project – Jiří Špičák</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: logo + menu ===== -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand logo" href="./index.html">
+          <i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span>
+          <small>JIŘÍ ŠPIČÁK</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./volleyball.html"><i class="bi bi-dribbble"></i> Volleyball</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./board-games.html"><i class="bi bi-dice-5-fill"></i> Board Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./video-games.html"><i class="bi bi-controller"></i> Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./gym.html"><i class="bi bi-heart-pulse-fill"></i> Gym</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./library.html"><i class="bi bi-collection-fill"></i> Game Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./join.html"><i class="bi bi-person-plus-fill"></i> Join Me</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER + BREADCRUMB ===== -->
+  <section class="page-header gym">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Gym</h1>
+      <p class="lead mb-3">Strength for the court, discipline for life.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="./index.html">Hobbies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gym</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Why I go to the gym</h2>
+            <p>I started going to the gym to jump higher and hit harder in volleyball. After a few months it became
+              a hobby on its own. Lifting weights clears my head after school and seeing progress every week is very motivating.</p>
+            <p>I train three times a week using a <strong>push / pull / legs</strong> split and add one mobility session for recovery.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#plan" class="btn btn-warning"><i class="bi bi-clipboard-check"></i> My training plan</a>
+              <button type="button" class="btn btn-outline-warning text-dark" data-bs-toggle="modal" data-bs-target="#tipsModal"><i class="bi bi-lightbulb"></i> Beginner tips</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="./images/gym.jpg" class="img-fluid rounded-4 shadow" alt="Push-up training in the gym">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="plan">
+      <div class="container">
+        <h2 class="section-title">My training plan</h2>
+        <ul class="nav nav-tabs" id="planTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="push-tab" data-bs-toggle="tab" data-bs-target="#push-pane" type="button" role="tab" aria-controls="push-pane" aria-selected="true">Push</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pull-tab" data-bs-toggle="tab" data-bs-target="#pull-pane" type="button" role="tab" aria-controls="pull-pane" aria-selected="false">Pull</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="legs-tab" data-bs-toggle="tab" data-bs-target="#legs-pane" type="button" role="tab" aria-controls="legs-pane" aria-selected="false">Legs</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="mobility-tab" data-bs-toggle="tab" data-bs-target="#mobility-pane" type="button" role="tab" aria-controls="mobility-pane" aria-selected="false">Mobility</button>
+          </li>
+        </ul>
+        <div class="tab-content boxed" id="planTabsContent">
+          <div class="tab-pane fade show active" id="push-pane" role="tabpanel" aria-labelledby="push-tab" tabindex="0">
+            <p><i class="bi bi-bullseye text-accent"></i> <strong>Focus:</strong> Chest, shoulders, triceps</p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle mb-0">
+                <thead><tr><th>#</th><th>Exercise</th><th>Sets × reps</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Bench press</td><td>4 × 6–8</td></tr>
+                  <tr><td>2</td><td>Overhead press</td><td>3 × 8</td></tr>
+                  <tr><td>3</td><td>Incline dumbbell press</td><td>3 × 10</td></tr>
+                  <tr><td>4</td><td>Lateral raises</td><td>3 × 15</td></tr>
+                  <tr><td>5</td><td>Triceps pushdown</td><td>3 × 12</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pull-pane" role="tabpanel" aria-labelledby="pull-tab" tabindex="0">
+            <p><i class="bi bi-bullseye text-accent"></i> <strong>Focus:</strong> Back, biceps</p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle mb-0">
+                <thead><tr><th>#</th><th>Exercise</th><th>Sets × reps</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Deadlift</td><td>3 × 5</td></tr>
+                  <tr><td>2</td><td>Pull-ups</td><td>4 × max</td></tr>
+                  <tr><td>3</td><td>Barbell row</td><td>3 × 8</td></tr>
+                  <tr><td>4</td><td>Face pulls</td><td>3 × 15</td></tr>
+                  <tr><td>5</td><td>Biceps curls</td><td>3 × 12</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="legs-pane" role="tabpanel" aria-labelledby="legs-tab" tabindex="0">
+            <p><i class="bi bi-bullseye text-accent"></i> <strong>Focus:</strong> Legs, core – important for jumping</p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle mb-0">
+                <thead><tr><th>#</th><th>Exercise</th><th>Sets × reps</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Squat</td><td>4 × 6</td></tr>
+                  <tr><td>2</td><td>Romanian deadlift</td><td>3 × 8</td></tr>
+                  <tr><td>3</td><td>Bulgarian split squat</td><td>3 × 10</td></tr>
+                  <tr><td>4</td><td>Box jumps</td><td>4 × 5</td></tr>
+                  <tr><td>5</td><td>Plank</td><td>3 × 60 s</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="mobility-pane" role="tabpanel" aria-labelledby="mobility-tab" tabindex="0">
+            <p><i class="bi bi-bullseye text-accent"></i> <strong>Focus:</strong> Recovery and injury prevention</p>
+            <div class="table-responsive">
+              <table class="table table-striped align-middle mb-0">
+                <thead><tr><th>#</th><th>Exercise</th><th>Sets × reps</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Foam rolling</td><td>10 min</td></tr>
+                  <tr><td>2</td><td>Hip opener stretch</td><td>2 × 60 s</td></tr>
+                  <tr><td>3</td><td>Shoulder dislocates</td><td>2 × 15</td></tr>
+                  <tr><td>4</td><td>Ankle mobility</td><td>2 × 10</td></tr>
+                  <tr><td>5</td><td>Light walk</td><td>30 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Personal records</h2>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col"><div class="stat-box shadow-sm"><i class="bi bi-trophy-fill text-warning fs-3"></i><div class="stat-number">85 kg</div><div class="text-muted">Bench press</div></div></div>
+          <div class="col"><div class="stat-box shadow-sm"><i class="bi bi-trophy-fill text-warning fs-3"></i><div class="stat-number">120 kg</div><div class="text-muted">Squat</div></div></div>
+          <div class="col"><div class="stat-box shadow-sm"><i class="bi bi-trophy-fill text-warning fs-3"></i><div class="stat-number">140 kg</div><div class="text-muted">Deadlift</div></div></div>
+          <div class="col"><div class="stat-box shadow-sm"><i class="bi bi-trophy-fill text-warning fs-3"></i><div class="stat-number">15</div><div class="text-muted">Pull-ups</div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODAL: tips ===== -->
+  <div class="modal fade" id="tipsModal" tabindex="-1" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-gym text-white">
+          <h2 class="modal-title fs-5" id="tipsModalLabel"><i class="bi bi-lightbulb"></i> Tips for beginners</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success"></i> <strong>Technique first.</strong> Learn the movement with light weight before adding kilograms.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success"></i> <strong>Warm up.</strong> 5–10 minutes of cardio and a few lighter sets.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success"></i> <strong>Progressive overload.</strong> Add a little weight or one more rep every week.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success"></i> <strong>Sleep and eat.</strong> Muscles grow when you rest, not when you train.</li>
+            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Be consistent.</strong> Three trainings every week beat six trainings once a month.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Got it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <div class="logo text-white mb-2"><i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span></div>
+          <p class="small mb-3">My personal website about the things I love doing in my free time –
+            volleyball, board games, video games and the gym.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="h6 text-white text-uppercase">Pages</h2>
+          <ul class="list-unstyled small">
+            <li><a href="./index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="./volleyball.html"><i class="bi bi-chevron-right small"></i> Volleyball</a></li>
+            <li><a href="./board-games.html"><i class="bi bi-chevron-right small"></i> Board Games</a></li>
+            <li><a href="./video-games.html"><i class="bi bi-chevron-right small"></i> Video Games</a></li>
+            <li><a href="./gym.html"><i class="bi bi-chevron-right small"></i> Gym</a></li>
+            <li><a href="./library.html"><i class="bi bi-chevron-right small"></i> Game Library</a></li>
+            <li><a href="./join.html"><i class="bi bi-chevron-right small"></i> Join Me</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contact</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill text-accent"></i> Czech Republic</li>
+            <li class="mb-1"><i class="bi bi-envelope-fill text-accent"></i> <a href="./join.html">Write me via the form</a></li>
+            <li class="mb-1"><i class="bi bi-mortarboard-fill text-accent"></i> Semester project 7REWB</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 Jiří Špičák · Made with <i class="bi bi-bootstrap-fill"></i> Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <button type="button" id="backToTop" class="btn btn-accent shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

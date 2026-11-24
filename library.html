@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Searchable table of all my board games and video games.">
+  <meta name="author" content="Jiří Špičák">
+  <title>Game Library | Semestral Project – Jiří Špičák</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="./css/dataTables.bootstrap5.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: logo + menu ===== -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand logo" href="./index.html">
+          <i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span>
+          <small>JIŘÍ ŠPIČÁK</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./volleyball.html"><i class="bi bi-dribbble"></i> Volleyball</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./board-games.html"><i class="bi bi-dice-5-fill"></i> Board Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./video-games.html"><i class="bi bi-controller"></i> Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gym.html"><i class="bi bi-heart-pulse-fill"></i> Gym</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./library.html"><i class="bi bi-collection-fill"></i> Game Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./join.html"><i class="bi bi-person-plus-fill"></i> Join Me</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER + BREADCRUMB ===== -->
+  <section class="page-header library">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Game Library</h1>
+      <p class="lead mb-3">All 60 board games and video games I own, played or want to play.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Game Library</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+          <h2 class="section-title mb-0">My collection</h2>
+          <div class="btn-group" role="group" aria-label="Filter by type">
+            <button type="button" class="btn btn-outline-dark active" data-filter="all"><i class="bi bi-grid"></i> All</button>
+            <button type="button" class="btn btn-outline-success" data-filter="Board game"><i class="bi bi-dice-5"></i> Board games</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="Video game"><i class="bi bi-controller"></i> Video games</button>
+          </div>
+        </div>
+        <p class="text-muted">Use the search box, sort by clicking on a column header or change the number of rows per page.</p>
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <table id="library" class="table table-striped table-hover align-middle w-100">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th><th>Title</th><th>Type</th><th>Genre</th><th>Players</th><th>Year</th><th>Platform</th><th>My rating</th><th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr><td>1</td><td class="fw-semibold">7 Wonders</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card drafting</td><td>2–7</td><td>2010</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>2</td><td class="fw-semibold">Activity</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Party</td><td>3–16</td><td>1990</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>3</td><td class="fw-semibold">Among Us</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Party</td><td>4–15</td><td>2018</td><td>PC</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>4</td><td class="fw-semibold">Azul</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Abstract</td><td>2–4</td><td>2017</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>5</td><td class="fw-semibold">Baldur&#x27;s Gate 3</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1–4</td><td>2023</td><td>PC</td><td data-order="10" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> <span class="small text-muted">10</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>6</td><td class="fw-semibold">Bang!</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card game</td><td>4–7</td><td>2002</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>7</td><td class="fw-semibold">Brass: Birmingham</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Economic</td><td>2–4</td><td>2018</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-warning">Wishlist</span></td></tr>
+              <tr><td>8</td><td class="fw-semibold">Carcassonne</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Tile placement</td><td>2–5</td><td>2000</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>9</td><td class="fw-semibold">Cascadia</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Tile placement</td><td>1–4</td><td>2021</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>10</td><td class="fw-semibold">Catan</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Strategy</td><td>3–4</td><td>1995</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>11</td><td class="fw-semibold">Codenames</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Party</td><td>2–8</td><td>2015</td><td>Tabletop</td><td data-order="10" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> <span class="small text-muted">10</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>12</td><td class="fw-semibold">Counter-Strike 2</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>FPS</td><td>5v5</td><td>2023</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-primary">Playing</span></td></tr>
+              <tr><td>13</td><td class="fw-semibold">Cyberpunk 2077</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1</td><td>2020</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>14</td><td class="fw-semibold">Dixit</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Party</td><td>3–6</td><td>2008</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>15</td><td class="fw-semibold">Dobble</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Party</td><td>2–8</td><td>2009</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>16</td><td class="fw-semibold">Dominion</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Deck building</td><td>2–4</td><td>2008</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>17</td><td class="fw-semibold">EA Sports FC 24</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Sports</td><td>1–online</td><td>2023</td><td>PS5</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>18</td><td class="fw-semibold">Elden Ring</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Action RPG</td><td>1–online</td><td>2022</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>19</td><td class="fw-semibold">Everdell</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Worker placement</td><td>1–4</td><td>2018</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>20</td><td class="fw-semibold">Exploding Kittens</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card game</td><td>2–5</td><td>2015</td><td>Tabletop</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>21</td><td class="fw-semibold">Fortnite</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Battle royale</td><td>1–100</td><td>2017</td><td>PC</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>22</td><td class="fw-semibold">Gloomhaven</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Dungeon crawler</td><td>1–4</td><td>2017</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-warning">Wishlist</span></td></tr>
+              <tr><td>23</td><td class="fw-semibold">God of War</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Action-adventure</td><td>1</td><td>2018</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-warning">Wishlist</span></td></tr>
+              <tr><td>24</td><td class="fw-semibold">Grand Theft Auto V</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Action</td><td>1–online</td><td>2013</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>25</td><td class="fw-semibold">Hades</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Roguelike</td><td>1</td><td>2020</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>26</td><td class="fw-semibold">Hollow Knight</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Metroidvania</td><td>1</td><td>2017</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>27</td><td class="fw-semibold">It Takes Two</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Co-op adventure</td><td>2</td><td>2021</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>28</td><td class="fw-semibold">Kingdom Come: Deliverance</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1</td><td>2018</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>29</td><td class="fw-semibold">Kingdom Come: Deliverance II</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1</td><td>2025</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-primary">Playing</span></td></tr>
+              <tr><td>30</td><td class="fw-semibold">Kingdomino</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Tile placement</td><td>2–4</td><td>2016</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>31</td><td class="fw-semibold">League of Legends</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>MOBA</td><td>5v5</td><td>2009</td><td>PC</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>32</td><td class="fw-semibold">Love Letter</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card game</td><td>2–4</td><td>2012</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>33</td><td class="fw-semibold">Mafia: Definitive Edition</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Action</td><td>1</td><td>2020</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>34</td><td class="fw-semibold">Mario Kart 8 Deluxe</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Racing</td><td>1–12</td><td>2017</td><td>Switch</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>35</td><td class="fw-semibold">Minecraft</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Sandbox</td><td>1–multi</td><td>2011</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>36</td><td class="fw-semibold">Monopoly</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Family</td><td>2–8</td><td>1935</td><td>Tabletop</td><td data-order="5" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">5</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>37</td><td class="fw-semibold">Munchkin</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card game</td><td>3–6</td><td>2001</td><td>Tabletop</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>38</td><td class="fw-semibold">Pandemic</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Cooperative</td><td>2–4</td><td>2008</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>39</td><td class="fw-semibold">Patchwork</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Abstract</td><td>2</td><td>2014</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>40</td><td class="fw-semibold">Portal 2</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Puzzle</td><td>1–2</td><td>2011</td><td>PC</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>41</td><td class="fw-semibold">Rainbow Six Siege</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>FPS</td><td>5v5</td><td>2015</td><td>PC</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>42</td><td class="fw-semibold">Red Dead Redemption 2</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Action-adventure</td><td>1–online</td><td>2018</td><td>PC</td><td data-order="10" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> <span class="small text-muted">10</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>43</td><td class="fw-semibold">Risk</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Strategy</td><td>2–6</td><td>1959</td><td>Tabletop</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>44</td><td class="fw-semibold">Rocket League</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Sports</td><td>1–8</td><td>2015</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>45</td><td class="fw-semibold">Root</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Strategy</td><td>2–4</td><td>2018</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-warning">Wishlist</span></td></tr>
+              <tr><td>46</td><td class="fw-semibold">Scrabble</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Word</td><td>2–4</td><td>1948</td><td>Tabletop</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>47</td><td class="fw-semibold">Splendor</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Engine building</td><td>2–4</td><td>2014</td><td>Tabletop</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>48</td><td class="fw-semibold">Stardew Valley</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Simulation</td><td>1–4</td><td>2016</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>49</td><td class="fw-semibold">Super Mario Odyssey</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Platformer</td><td>1–2</td><td>2017</td><td>Switch</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>50</td><td class="fw-semibold">Terraforming Mars</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Strategy</td><td>1–5</td><td>2016</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>51</td><td class="fw-semibold">Terraria</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Sandbox</td><td>1–8</td><td>2011</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>52</td><td class="fw-semibold">The Crew: The Quest for Planet Nine</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Cooperative</td><td>2–5</td><td>2019</td><td>Tabletop</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>53</td><td class="fw-semibold">The Elder Scrolls V: Skyrim</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1</td><td>2011</td><td>PC</td><td data-order="8" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> <span class="small text-muted">8</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>54</td><td class="fw-semibold">The Legend of Zelda: Breath of the Wild</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Adventure</td><td>1</td><td>2017</td><td>Switch</td><td data-order="10" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> <span class="small text-muted">10</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>55</td><td class="fw-semibold">The Legend of Zelda: Tears of the Kingdom</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>Adventure</td><td>1</td><td>2023</td><td>Switch</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-primary">Playing</span></td></tr>
+              <tr><td>56</td><td class="fw-semibold">The Witcher 3: Wild Hunt</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>RPG</td><td>1</td><td>2015</td><td>PC</td><td data-order="10" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> <span class="small text-muted">10</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>57</td><td class="fw-semibold">Ticket to Ride</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Family</td><td>2–5</td><td>2004</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>58</td><td class="fw-semibold">Uno</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Card game</td><td>2–10</td><td>1971</td><td>Tabletop</td><td data-order="6" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span> <span class="small text-muted">6</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              <tr><td>59</td><td class="fw-semibold">Valorant</td><td data-search="Video game"><span class="badge bg-video"><i class="bi bi-controller"></i> Video game</span></td><td>FPS</td><td>5v5</td><td>2020</td><td>PC</td><td data-order="7" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span> <span class="small text-muted">7</span></td><td><span class="badge text-bg-secondary">Played</span></td></tr>
+              <tr><td>60</td><td class="fw-semibold">Wingspan</td><td data-search="Board game"><span class="badge bg-board"><i class="bi bi-dice-5"></i> Board game</span></td><td>Engine building</td><td>1–5</td><td>2019</td><td>Tabletop</td><td data-order="9" class="text-nowrap"><span class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> <span class="small text-muted">9</span></td><td><span class="badge text-bg-success">Owned</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-3 small">
+          <span class="badge text-bg-success">Owned</span> I have it at home &nbsp;
+          <span class="badge text-bg-primary">Playing</span> playing right now &nbsp;
+          <span class="badge text-bg-secondary">Played</span> played / finished &nbsp;
+          <span class="badge text-bg-warning">Wishlist</span> want to play
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <div class="logo text-white mb-2"><i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span></div>
+          <p class="small mb-3">My personal website about the things I love doing in my free time –
+            volleyball, board games, video games and the gym.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="h6 text-white text-uppercase">Pages</h2>
+          <ul class="list-unstyled small">
+            <li><a href="./index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="./volleyball.html"><i class="bi bi-chevron-right small"></i> Volleyball</a></li>
+            <li><a href="./board-games.html"><i class="bi bi-chevron-right small"></i> Board Games</a></li>
+            <li><a href="./video-games.html"><i class="bi bi-chevron-right small"></i> Video Games</a></li>
+            <li><a href="./gym.html"><i class="bi bi-chevron-right small"></i> Gym</a></li>
+            <li><a href="./library.html"><i class="bi bi-chevron-right small"></i> Game Library</a></li>
+            <li><a href="./join.html"><i class="bi bi-chevron-right small"></i> Join Me</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contact</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill text-accent"></i> Czech Republic</li>
+            <li class="mb-1"><i class="bi bi-envelope-fill text-accent"></i> <a href="./join.html">Write me via the form</a></li>
+            <li class="mb-1"><i class="bi bi-mortarboard-fill text-accent"></i> Semester project 7REWB</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 Jiří Špičák · Made with <i class="bi bi-bootstrap-fill"></i> Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <button type="button" id="backToTop" class="btn btn-accent shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/dataTables.js"></script>
+  <script src="./js/dataTables.bootstrap5.js"></script>
+  <script src="./js/library.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

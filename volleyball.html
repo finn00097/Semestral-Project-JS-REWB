@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Volleyball – rules, positions and my training.">
+  <meta name="author" content="Jiří Špičák">
+  <title>Volleyball | Semestral Project – Jiří Špičák</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: logo + menu ===== -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand logo" href="./index.html">
+          <i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span>
+          <small>JIŘÍ ŠPIČÁK</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./volleyball.html"><i class="bi bi-dribbble"></i> Volleyball</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./board-games.html"><i class="bi bi-dice-5-fill"></i> Board Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./video-games.html"><i class="bi bi-controller"></i> Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gym.html"><i class="bi bi-heart-pulse-fill"></i> Gym</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./library.html"><i class="bi bi-collection-fill"></i> Game Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./join.html"><i class="bi bi-person-plus-fill"></i> Join Me</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER + BREADCRUMB ===== -->
+  <section class="page-header volleyball">
+    <div class="container">
+      <h1 class="fw-bold mb-1">Volleyball</h1>
+      <p class="lead mb-3">My favourite team sport – indoor in winter, beach in summer.</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="./index.html">Hobbies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Volleyball</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Why I love volleyball</h2>
+            <p>Volleyball is a fast team game where nobody can win alone. Every point needs a good reception,
+              a precise set and a strong attack – and that's exactly what I like about it.</p>
+            <p>Two teams of <strong>six players</strong> are separated by a net. Each team may touch the ball
+              <strong>three times</strong> before sending it back. A set is played to <strong>25 points</strong>
+              (with a two-point lead) and the match is best of five sets – the deciding fifth set goes only to 15.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rulesModal"><i class="bi bi-book"></i> Basic rules</button>
+              <a href="./join.html" class="btn btn-outline-primary"><i class="bi bi-person-plus"></i> Come play with us</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="./images/volleyball.jpg" class="img-fluid rounded-4 shadow" alt="Volleyball players at the net">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Player positions</h2>
+            <ul class="list-group shadow-sm">
+              <li class="list-group-item d-flex gap-3 align-items-start">
+                <i class="bi bi-hand-index-thumb fs-4 text-primary"></i>
+                <div><h3 class="h6 mb-1">Setter</h3><p class="mb-0 small">The "quarterback" of the team. Touches the ball second and sets it up for the hitters.</p></div>
+              </li>
+              <li class="list-group-item d-flex gap-3 align-items-start">
+                <i class="bi bi-lightning-charge fs-4 text-primary"></i>
+                <div><h3 class="h6 mb-1">Outside hitter</h3><p class="mb-0 small">Attacks from the left side, receives serves and plays both in attack and defence. <strong>My position.</strong></p></div>
+              </li>
+              <li class="list-group-item d-flex gap-3 align-items-start">
+                <i class="bi bi-arrow-left-right fs-4 text-primary"></i>
+                <div><h3 class="h6 mb-1">Opposite</h3><p class="mb-0 small">Attacks from the right side and blocks the opponent's outside hitter. Often the top scorer.</p></div>
+              </li>
+              <li class="list-group-item d-flex gap-3 align-items-start">
+                <i class="bi bi-bricks fs-4 text-primary"></i>
+                <div><h3 class="h6 mb-1">Middle blocker</h3><p class="mb-0 small">The wall at the net – blocks attacks and hits fast quick sets in the middle.</p></div>
+              </li>
+              <li class="list-group-item d-flex gap-3 align-items-start">
+                <i class="bi bi-shield-check fs-4 text-primary"></i>
+                <div><h3 class="h6 mb-1">Libero</h3><p class="mb-0 small">Defensive specialist in a different colour jersey. Can't attack above the net or serve in most leagues.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Indoor vs. beach</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle bg-white">
+                <thead class="table-primary"><tr><th></th><th><i class="bi bi-building"></i> Indoor</th><th><i class="bi bi-sun"></i> Beach</th></tr></thead>
+                <tbody>
+                  <tr><th>Players</th><td>6 per team</td><td>2 per team</td></tr>
+                  <tr><th>Court</th><td>18 × 9 m</td><td>16 × 8 m</td></tr>
+                  <tr><th>Points per set</th><td>25 (5th set 15)</td><td>21 (3rd set 15)</td></tr>
+                  <tr><th>Sets to win</th><td>3</td><td>2</td></tr>
+                  <tr><th>Net height (men)</th><td colspan="2" class="text-center">2.43 m</td></tr>
+                  <tr><th>Net height (women)</th><td colspan="2" class="text-center">2.24 m</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-info d-flex gap-2 mb-0" role="alert">
+              <i class="bi bi-info-circle-fill"></i>
+              <div>Beach volleyball is part of the Olympics since 1996, indoor volleyball since 1964.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">A typical training</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+          <div class="col"><div class="card h-100 border-primary"><div class="card-body"><span class="badge text-bg-primary mb-2">15 min</span><h3 class="h5">Warm-up</h3><p class="card-text small mb-0">Running, dynamic stretching and jumps to prepare the shoulders and knees.</p></div></div></div>
+          <div class="col"><div class="card h-100 border-primary"><div class="card-body"><span class="badge text-bg-primary mb-2">30 min</span><h3 class="h5">Passing &amp; setting</h3><p class="card-text small mb-0">Forearm passes and overhead sets in pairs, then reception of serves.</p></div></div></div>
+          <div class="col"><div class="card h-100 border-primary"><div class="card-body"><span class="badge text-bg-primary mb-2">30 min</span><h3 class="h5">Attack &amp; block</h3><p class="card-text small mb-0">Approach steps, spikes from position 4 and blocking at the net.</p></div></div></div>
+          <div class="col"><div class="card h-100 border-primary"><div class="card-body"><span class="badge text-bg-primary mb-2">45 min</span><h3 class="h5">Game</h3><p class="card-text small mb-0">6 vs 6 match – the best part of every training.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODAL: rules ===== -->
+  <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-volleyball text-white">
+          <h2 class="modal-title fs-5" id="rulesModalLabel"><i class="bi bi-book"></i> Basic volleyball rules</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ol class="mb-0">
+            <li class="mb-2">Every rally wins a point (rally point system).</li>
+            <li class="mb-2">A team may touch the ball at most 3 times before it crosses the net (a block doesn't count).</li>
+            <li class="mb-2">One player can't touch the ball twice in a row (except after a block).</li>
+            <li class="mb-2">Players rotate clockwise every time their team wins back the serve.</li>
+            <li class="mb-2">Touching the net or stepping over the centre line is a fault.</li>
+            <li>Back-row players can't attack the ball above the net in front of the 3 m line.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <div class="logo text-white mb-2"><i class="bi bi-lightning-charge-fill logo-icon"></i> SEMESTRAL <span class="logo-accent">PROJECT</span></div>
+          <p class="small mb-3">My personal website about the things I love doing in my free time –
+            volleyball, board games, video games and the gym.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://discord.com/" target="_blank" rel="noopener" aria-label="Discord"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="h6 text-white text-uppercase">Pages</h2>
+          <ul class="list-unstyled small">
+            <li><a href="./index.html"><i class="bi bi-chevron-right small"></i> Home</a></li>
+            <li><a href="./volleyball.html"><i class="bi bi-chevron-right small"></i> Volleyball</a></li>
+            <li><a href="./board-games.html"><i class="bi bi-chevron-right small"></i> Board Games</a></li>
+            <li><a href="./video-games.html"><i class="bi bi-chevron-right small"></i> Video Games</a></li>
+            <li><a href="./gym.html"><i class="bi bi-chevron-right small"></i> Gym</a></li>
+            <li><a href="./library.html"><i class="bi bi-chevron-right small"></i> Game Library</a></li>
+            <li><a href="./join.html"><i class="bi bi-chevron-right small"></i> Join Me</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="h6 text-white text-uppercase">Contact</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-1"><i class="bi bi-geo-alt-fill text-accent"></i> Czech Republic</li>
+            <li class="mb-1"><i class="bi bi-envelope-fill text-accent"></i> <a href="./join.html">Write me via the form</a></li>
+            <li class="mb-1"><i class="bi bi-mortarboard-fill text-accent"></i> Semester project 7REWB</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 Jiří Špičák · Made with <i class="bi bi-bootstrap-fill"></i> Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <button type="button" id="backToTop" class="btn btn-accent shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
