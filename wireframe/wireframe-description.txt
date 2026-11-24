@@ -1,0 +1,62 @@
+SEMESTRAL PROJECT - WIREFRAME OF THE HOMEPAGE (MOBILE VIEW)
+Author: Jiří Špičák, semester project 7REWB
+Image:  wireframe-mobile.png (also wireframe-mobile.svg)
+Screen: typical smartphone, 375 px wide - all content is in one column
+
+Structure of the homepage from top to bottom
+(the numbers match the orange numbers in the wireframe image):
+
+1. HEADER
+   Dark navigation bar that stays at the top while scrolling (sticky).
+   On the left the logo - styled text "SEMESTRAL PROJECT" with a lightning icon and my name.
+   On the right a hamburger button. On a phone the 7 menu items
+   (Home, Volleyball, Board Games, Video Games, Gym, Game Library, Join Me)
+   are hidden and open as a drop-down list after a click.
+
+2. CAROUSEL
+   Full-width slideshow right under the menu with 4 rotating images
+   (volleyball, board games, video games, gym). Every slide has a box with
+   a title and a button that leads to the page of that hobby.
+   Arrows on the sides and indicators at the bottom switch the slides,
+   the slides also change automatically every 5 seconds.
+
+3. BREADCRUMB NAVIGATION
+   Shows where the visitor is ("Home"). On the other pages it shows the path,
+   e.g. Home / Hobbies / Volleyball.
+
+4. INTRO
+   Round avatar with my initials, heading "Hi, I'm Jiří", a short text about the
+   website and three buttons in different styles:
+   "More about me" opens a MODAL window with details about me,
+   "My game library" leads to the table, "Join me" is a link-style button.
+
+5. MY HOBBIES
+   4 cards (Volleyball, Board Games, Video Games, Gym). On a phone they are
+   below each other (1 per row), on a tablet 2 and on a PC 4 in a row.
+   Each card has an image, a round icon, a title, a short text and a
+   "Read more" button.
+
+6. STATISTICS
+   4 small boxes with a number and a short description in a 2 x 2 grid
+   (on a PC all 4 in one row).
+
+7. TABS "MY WEEK"
+   4 tabs: Schedule, Goals, Playing now and FAQ. Only the content of the active
+   tab is visible; clicking another tab shows its content
+   (a table, progress bars, text and an accordion).
+
+8. CALL TO ACTION
+   Dark box with the text "Want to play together?" and a button that leads
+   to the Join Me page with the form.
+
+9. FOOTER
+   Logo, short text, round social media icons, a list of links to all pages,
+   contact information and the copyright line.
+
+10. BACK TO TOP BUTTON
+    Round floating button in the bottom right corner. It appears after scrolling
+    down and smoothly scrolls the page back to the top.
+
+Hidden elements (not visible in the wireframe until opened):
+   - MODAL window "About me" (opened by the button in part 4)
+   - drop-down menu (opened by the hamburger button in part 1)

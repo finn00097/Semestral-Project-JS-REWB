@@ -1,0 +1,369 @@
+/* ==========================================================
+   Semestral Project - Jiří Špičák
+   Semester project 7REWB - custom styles on top of Bootstrap 5
+   ========================================================== */
+
+:root {
+    --ph-accent: #f97316;
+    --ph-accent-dark: #c2410c;
+    --ph-dark: #111827;
+    --ph-volleyball: #1d4ed8;
+    --ph-board: #15803d;
+    --ph-video: #7e22ce;
+    --ph-gym: #ea580c;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, .display-font {
+    font-family: 'Oswald', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- logo ---------- */
+.logo {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+}
+
+.logo .logo-icon {
+    color: var(--ph-accent);
+}
+
+.logo .logo-accent {
+    color: var(--ph-accent);
+}
+
+.logo small {
+    display: block;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+/* ---------- navbar ---------- */
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link.active {
+    color: var(--ph-accent) !important;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* ---------- carousel ---------- */
+.hero-carousel .carousel-item img {
+    height: 520px;
+    object-fit: cover;
+}
+
+.hero-carousel .carousel-caption {
+    bottom: 3rem;
+    background: rgba(17, 24, 39, 0.55);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    left: 20%;
+    right: 20%;
+}
+
+.hero-carousel .carousel-caption h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .hero-carousel .carousel-item img {
+        height: 280px;
+    }
+
+    .hero-carousel .carousel-caption {
+        left: 8%;
+        right: 8%;
+        bottom: 2rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-carousel .carousel-caption h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------- page header with breadcrumb (sub pages) ---------- */
+.page-header {
+    background: linear-gradient(135deg, var(--ph-dark), #374151);
+    color: #fff;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.page-header.volleyball { background: linear-gradient(135deg, #1e3a8a, #0ea5e9); }
+.page-header.board      { background: linear-gradient(135deg, #14532d, #65a30d); }
+.page-header.video      { background: linear-gradient(135deg, #1e1b4b, #7e22ce); }
+.page-header.gym        { background: linear-gradient(135deg, #7c2d12, #ea580c); }
+.page-header.library    { background: linear-gradient(135deg, #0f172a, #334155); }
+.page-header.join       { background: linear-gradient(135deg, #9a3412, #f59e0b); }
+
+.page-header h1 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+.page-header .breadcrumb {
+    margin-bottom: 0;
+}
+
+.page-header .breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.page-header .breadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.page-header .breadcrumb-item.active,
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- sections ---------- */
+.section {
+    padding: 3.5rem 0;
+}
+
+.section-title {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--ph-accent);
+}
+
+.text-center .section-title::after,
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------- hobby cards ---------- */
+.hobby-card {
+    border: 0;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.hobby-card .card-img-top {
+    height: 170px;
+    object-fit: cover;
+}
+
+.hobby-card .hobby-icon {
+    width: 56px;
+    height: 56px;
+    margin-top: -44px;
+    border: 4px solid #fff;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.bg-volleyball { background-color: var(--ph-volleyball) !important; }
+.bg-board      { background-color: var(--ph-board) !important; }
+.bg-video      { background-color: var(--ph-video) !important; }
+.bg-gym        { background-color: var(--ph-gym) !important; }
+
+.text-accent   { color: var(--ph-accent) !important; }
+
+/* custom accent button */
+.btn-accent {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--ph-accent);
+    --bs-btn-border-color: var(--ph-accent);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--ph-accent-dark);
+    --bs-btn-hover-border-color: var(--ph-accent-dark);
+    --bs-btn-active-bg: var(--ph-accent-dark);
+    --bs-btn-active-border-color: var(--ph-accent-dark);
+}
+
+/* ---------- stats ---------- */
+.stat-box {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    height: 100%;
+}
+
+.stat-box .stat-number {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--ph-accent);
+    line-height: 1.1;
+}
+
+/* ---------- call to action ---------- */
+.cta {
+    background: linear-gradient(135deg, var(--ph-dark), #4b5563);
+    color: #fff;
+    border-radius: 1.25rem;
+}
+
+/* ---------- tabs ---------- */
+.nav-tabs .nav-link {
+    color: #374151;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--ph-accent-dark);
+    border-top: 3px solid var(--ph-accent);
+}
+
+.tab-content.boxed {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.5rem;
+}
+
+/* ---------- avatar ---------- */
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ph-accent), #facc15);
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 1.5rem rgba(249, 115, 22, 0.35);
+}
+
+/* ---------- game cards (board + video games) ---------- */
+.game-card .card-header {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+}
+
+/* ---------- DataTable ---------- */
+#library tbody td {
+    vertical-align: middle;
+}
+
+.rating {
+    color: #f59e0b;
+    white-space: nowrap;
+}
+
+/* ---------- form ---------- */
+.form-card {
+    background: #fff;
+    border-radius: 1rem;
+}
+
+.form-section-title {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: var(--ph-accent-dark);
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.4rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* ---------- footer ---------- */
+footer.site-footer {
+    background-color: var(--ph-dark);
+    color: #d1d5db;
+}
+
+footer.site-footer a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+footer.site-footer a:hover {
+    color: var(--ph-accent);
+}
+
+footer.site-footer .social a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: #1f2937;
+    margin-right: 0.4rem;
+    font-size: 1.1rem;
+}
+
+footer.site-footer .social a:hover {
+    background: var(--ph-accent);
+    color: #fff;
+}
+
+/* ---------- back to top button ---------- */
+#backToTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1030;
+    display: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+#backToTop.show {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* longer logo text must fit next to the hamburger button on phones */
+@media (max-width: 400px) {
+    .navbar .logo {
+        font-size: 1.25rem;
+        letter-spacing: 0.04em;
+    }
+}
